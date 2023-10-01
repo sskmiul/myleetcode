@@ -1,0 +1,15 @@
+init local repo then set upstream
+There is no tracking information for the current branch
+git remote add main https://github.com/sskmiul/myleetcode.git
+git remote -v
+git pull --set-upstream main main
+
+rebase onto latest master
+git stash
+`git checkout master` を実行して、`master` ブランチに移動する。
+`git pull` を実行して、リモートの `master` ブランチから最新の変更を取得する。
+git rebase
+fix conflicts, commit
+git push
+
+
