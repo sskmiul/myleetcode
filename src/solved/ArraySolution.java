@@ -5,10 +5,26 @@ public class ArraySolution {
 
         ArraySolution s = new ArraySolution();
 
-        System.out.println(s.removeDuplicates(new int[]{1, 1, 2}));
-        System.out.println(s.removeDuplicates(new int[]{1, 1,}));
-        System.out.println(s.removeDuplicates(new int[]{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}));
+        System.out.println(s.maxProfit(new int[]{1, 1, 2}));
+        System.out.println(s.maxProfit(new int[]{7,1,5,3,6,4}));
+        System.out.println(s.maxProfit(new int[]{1,2,3,4,5}));
     }
+
+    /**
+     * https://leetcode.com/explore/featured/card/top-interview-questions-easy/92/array/564/
+     */
+    public int maxProfit(int[] prices) {
+        int max = 0;
+        for (int i = 1; i < prices.length; i++) {
+            int rise = prices[i] - prices[i - 1];
+            if (rise > 0) {
+                max += rise;
+            }
+
+        }
+        return max;
+    }
+
 
     /**
      * https://leetcode.com/explore/featured/card/top-interview-questions-easy/92/array/727/
